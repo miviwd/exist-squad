@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exist Squad</title>
+    <style>
+        body {
+            background: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #conteudo {
+            background: #f3f3f3;
+            width: 80%;
+            max-width: 400px; /* Defina um valor máximo para a largura do card conforme necessário */
+            padding: 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: #756bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Exist squad</h2>
+        <p id="frase"></p>
+        <button class="btn" onclick="mostrarFrase()">Mostrar Frase</button>
+        <button class="btn" onclick="redirecionar()">Ir para Outra Página</button>
+    </div>
+
+    <script>
+        const frasesFofas = [
+            "Você é incrível!",
+            "O mundo é mais bonito com você nele.",
+            "Seja a razão de alguém sorrir hoje.",
+            "Obrigada por estar aqui.",
+            "Eu tenho orgulho de você.",
+            "Sua existência faz diferença."
+            
+        ];
+
+        function mostrarFrase() {
+            const indice = Math.floor(Math.random() * frasesFofas.length);
+            document.getElementById('frase').innerText = frasesFofas[indice];
+        }
+
+        function redirecionar() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

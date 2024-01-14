@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+Tutorial: https://www.youtube.com/watch?v=zxxB9SFh9p4
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exist Squad?</title>
+    <style>
+        body {
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        #conteudo {
+            background: #ffffff;
+            text-align: center;
+            font-family: sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: #756bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Está preparado para chorar?</h2>
+        <div>
+            <button class="btn" onclick="sim()">SIM</button>
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+        </div>
+    </div>
+
+    <script>
+        function sim() {
+            alert("Obrigada por fazer do exist uma família! Se você está aqui, sabia que é importante para todos nós, está bem? Eu também te amo e agradeço pela sua existência, ok? <3:)");
+            // redireciona para um URL após clicar no SIM
+            location.href = "https://youtu.be/xZFjEJipKMY?si=__Bvdm_rGNcmR6Og";
+        }
+
+        function desvia(btn) {
+            // btn declarado na função
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    </script>
+</body>
+
+</html>
